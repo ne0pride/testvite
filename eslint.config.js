@@ -67,7 +67,13 @@ const config = [
             '^@services/',
             '^@utils/',
           ],
-          newlinesBetween: 'ignore',
+          customGroups: {
+            value: {
+              'base-components': ['/*/*/[!-]*/*.*'],
+              'compound-components': ['/*/*/*-*/*.*'],
+            },
+          },
+          newlinesBetween: 'always',
         },
       ],
       'react/jsx-uses-react': 'off',
